@@ -172,8 +172,6 @@ pylint_rcfile = os.path.join(
     os.path.dirname(os.path.realpath(__file__)),
     'cfg',
     pylint_config_file)
-for r in ["--config-file=" + pylint_rcfile] + extra_params_cmd:
-    print(travis_helpers.green(r))
 count_errors = run_pylint.main([
     "--config-file=" + pylint_rcfile,
     ] + extra_params_cmd, standalone_mode=False)
